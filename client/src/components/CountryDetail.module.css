@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .back {
+    border-radius: 5px;
+    color:#07648f;
+    background-color: antiquewhite;
+    width: 8em;
+    padding: 5px;
+    border-color: #07648f;
+    font-family: 'Arvo', serif;
+    font-size: medium;
+    font-weight: bolder;
+    cursor: pointer;
+  }
+
+  .back:hover {
+    color: antiquewhite;
+    background-color: #07648f;
+    border-color: #07648f;
+    width: 8em;
+    padding: 5px;
+  }
+
+  .countryDetails{
+    font-size: 1.0rem;
+    text-align: justify;
+}
+
+.countryDetails{
+    margin: 2rem;
+}
+
+
+ .background{
+    background: url("https://www.go-fair.org/wp-content/uploads/2020/09/iStock-878855462_NicoElNino-scaled.jpg");
+    padding: 20rem; 
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+     height: 80rem;
+    /* background: url("https://thefintechtimes.com/wp-content/uploads/2020/03/iStock-1154360052.jpg") no-repeat;
+    height: 49rem;
+    padding: 5rem; */
+    color:#07648f
+    
+}
+
+.countryImage{
+    border-radius: 15px;
+    margin-right: 0.5rem;
+ }
+ 
+ .backCaja {
+     margin-right: 1rem;
+     
+ }
+
+.detailsContainer{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
+   
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: rgba(255, 255, 255, 0.692);
+    display: flex;
+    justify-content: center;
+    border-radius: 15px;
+    flex-direction: row;
+}
+
+.col{
+    max-width: 600px;
+    margin: 40px;
+    height: auto;
+    height: 80%;
+    
+}
+
+.countryImage{
+    border-radius: 15px;
+}
+
+.countryDetails{
+    font-size: 1.3rem;
+    text-align: justify;
+}
+
+.firstItem{
+    margin-top: 0;
+}
+
+.actContainer{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 60px);
+    gap: 40px;
+
+
+}
+
+.activities{
+    border: 2px solid #7267bc;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+@media (max-width: 560px){
+    .countryImage{
+        width: 90%;
+        height: auto;
+    }
+} 
+
+
+.actContainer{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 60px);
+    gap: 40px;
+    display: flex;
+
+
+}
+
+.activities{
+    margin-top: 10rem;
+    border: 2px solid #07648f;
+    padding:12px;
+    border-radius: 10px;
+    text-align: justify;
+}
+
+p {
+    font-size: 1.3rem;
+    color: #111;
+}

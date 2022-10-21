@@ -1,0 +1,114 @@
+/* .card{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    font-size: 1.5rem;
+    text-align: center;
+    border-color: #0A201B;
+    padding: 10px 50px 10px 50px;
+    align-items: center;
+    border: 1px solid #f8f8f8;
+    border-radius: 20px;
+    text-shadow: 0 0 7px rgb(251, 251, 251);
+}
+
+.countryImage{
+    border-radius: 10px;
+    align-items: center;
+    flex: center;
+}
+
+.card:hover{
+    opacity: 0.8;
+    background-color: #D6ECF6;
+    outline: none;
+    border: 1px solid #211C42;
+    box-shadow: 0 0 10px #211C42;
+    
+    border-radius: 20px;
+}
+ */
+
+/*  .card{
+    max-width: 1400px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 35px;
+ } */
+
+
+ .card{
+ /*    max-width: 1400px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 35px; */
+    border-radius: 4%;
+    /* background-color: rgba(255, 255, 255, 0.685); */
+    background-color: rgba(255, 255, 255, 0.534);
+    height: 350px;
+    width: 350px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    margin: 15px;    
+    
+    
+}
+
+ .banderaCardContainer{
+    border-radius: 4%;
+    /* width: 90px;
+    height: 100%;  */
+    object-fit: cover;
+}
+
+.tituloNombre{
+    color: #051030;
+    font-weight: bolder;
+    font-size: larger;
+    text-align: center;
+   /*  margin: 2px 0px -15px 0px ; */
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 1px 5px 3px 5px;
+    
+}
+
+.tituloContinente {
+    color: rgb(53, 53, 53);
+    text-align: center;
+    margin-top: 12px;
+    margin-bottom: 15px;
+    font-size:medium;
+}
+
+.botonCard {
+    border-radius: 5px;
+    color:#07648f;
+    background-color: antiquewhite;
+    width: 6em;
+    padding: 4px;
+    border-color: #07648f;
+    font-family: 'Arvo', serif; 
+    font-weight: bolder;
+    margin-bottom: 5px;
+    cursor: pointer;
+    
+}
+
+.botonCard:hover {
+    color: antiquewhite;
+    background-color: #07648f;
+    border-color: #07648f;
+    width: 6em;
+    
+   /*  background-color:rgb(46, 42, 42); */
+}

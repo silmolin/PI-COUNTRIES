@@ -1,0 +1,403 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.homeContainer{
+  background-image: url("https://www.go-fair.org/wp-content/uploads/2020/09/iStock-878855462_NicoElNino-scaled.jpg");
+    width: 100%;
+    /* height: 110rem; */
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    display: flex;
+    flex-direction: column;
+}
+
+.cajaPaises{
+ /*    
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 80%;
+    align-items: center;
+      */
+   /*  padding: 40px; */
+   display: inline-flex;
+   gap: 90px;
+    padding: 40px;
+    display: grid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 140px; 
+    grid-template-columns: repeat(3, 280px); 
+    display: grid; 
+    display: grid;
+  grid-template-columns: repeat(3, 270px);
+  gap: 120px;
+  padding: 40px;
+  justify-content: center;
+}
+
+  /* display: grid;
+  grid-template-columns: repeat(3, 270px);
+  gap: 120px;
+  padding: 40px;
+  justify-content: center; */
+
+
+.filtro {
+  background-color:rgb(46, 42, 42);
+  border-color: black;
+  border-radius: 5px;
+  display: inline-flex;
+  align-items: center;
+  color: blanchedalmond;
+  font-weight: bold;
+  padding: 5px 20px 5px 20px;
+  font-family: 'Arvo', serif;
+  margin: 25px 0px 15px 0px;
+  margin: 5px;
+  font-size: 16px;
+  
+  
+}
+
+.refrescar{
+  background-color:rgb(46, 42, 42);
+  border-color: black;
+  border-radius: 5px;
+  align-items: center;
+  color: blanchedalmond;
+  font-weight: bold;
+  padding: 5px 20px 5px 20px;
+  font-family: 'Arvo', serif;
+  margin: 5px;
+  cursor: pointer;
+  font-size: 16px;
+
+}
+
+.select {
+  border-radius: 5px;
+  border-color: #07648f;
+  padding: 3px;
+  margin: 8px;
+}
+
+.filtro-search{
+  background-color: #07648f;
+  border-color: black;
+  border-radius: 5px;
+  display: inline-flex;
+  align-items: center;
+  color: blanchedalmond;
+  font-weight: bold;
+  padding: 0px 0px 0px 0px;
+  font-family: 'Arvo', serif;
+  margin: 25px 0px 15px 0px;
+  
+}
+
+.boxFiltrosYsearchBar{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+ /*  width: 90%; */
+  align-items: center;
+  margin-bottom: 50px;
+
+}
+
+
+.nav{
+  
+  height: 85px;
+  width: 100%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+
+}
+
+.title{
+  /* background-color: #ffffff; */
+ 
+  height: 85px;
+  width: 100%;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: bolder; 
+  font-size: 50px; 
+    color: #07648f; 
+    text-shadow: 0 1px 0 #ddd, 0 2px 0 #ccc, 0 3px 0 #bbb, 0 4px 0 #aaa, 0 5px 0 #acacac, 0 6px 1px rgba(0,0,0,0.1), 0 0 5px rgba(0,0,0,0.1), 0 1px 3px rgba(0,0,0,0.3), 0 3px 5px rgba(0,0,0,0.2), 0 5px 10px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.2), 0 20px 20px rgba(0,0,0,0.15);
+} 
+
+.title{
+  text-align: left;
+  padding-left: 150px;
+  cursor: pointer;  
+}
+
+.title:hover{
+  color: #4c585c;
+}
+
+
+.center{
+    /* display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;  */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative; 
+    top: -60px;
+}
+ 
+
+
+.buttonAct{
+ padding-top: 0.3rem;
+  align-items: center;
+  border-radius: 5px;
+  cursor: pointer;
+  height: 2.3em;
+  border: none;
+  color:antiquewhite;
+  background-color: #07648f;
+  width: 12em;
+  
+  font-weight: bold;
+  border: 2px solid  #07648f;
+}
+
+
+.buttonAct:hover {
+  margin-left: 10px;
+  border-radius: 5px;
+  
+  height: 2.3em;
+
+  color: #07648f;
+  background-color: antiquewhite;
+  border-color:2px  #07648f;
+  width: 6em;
+
+  width: 12em;
+  top: -6rem;
+  font-weight: bolder;
+  cursor: pointer;
+ /*  background-color:rgb(46, 42, 42); */
+}
+
+
+
+  
+/*  .buttonAct{
+  border-radius: 5px;
+  height: 2.3em;
+  border: none;
+  color:antiquewhite;
+  background-color: #07648f;
+  width: 12em;
+  font-weight: bolder;
+  border: 2px solid  #07648f;
+
+ } */
+  
+      /* border-radius: 5px;
+      color:antiquewhite;
+      background-color: #07648f;
+      width: 10em;
+      padding: 9px;
+      border-color: #07648f;
+      font-family: 'Arvo', serif;
+      font-size: larger;
+      font-weight: bolder;
+      cursor: pointer; */
+ 
+/*  margin-left: 10px;
+ border-radius: 5px;
+ cursor: pointer;
+ height: 2.3em;
+ border: none;
+ color:antiquewhite;
+ background-color: #07648f;
+ width: 12em;
+ top: -6rem;
+ font-weight: bolder;
+ border: 2px solid  #07648f;
+   */
+  /*   .btn_landing{
+      border-radius: 5px;
+      color:#07648f;
+      background-color: antiquewhite;
+      width: 8em;
+      padding: 5px;
+      border-color: #07648f;
+      font-family: 'Arvo', serif;
+      font-size: medium;
+      font-weight: bolder;
+      cursor: pointer;
+    }
+  
+    .btn_landing:hover{
+      color: antiquewhite;
+      background-color: #07648f;
+      border-color: #07648f;
+      width: 8em;
+      padding: 5px;
+  }
+
+ */
+
+/* 
+
+padding-top: 15%;
+    padding-bottom: 15%;
+    font-family: Arial Black; 
+    font-weight: bolder; 
+    font-size: 80px; 
+    color: #fff; 
+    text-shadow: 0 1px 0 #ddd, 0 2px 0 #ccc, 0 3px 0 #bbb, 0 4px 0 #aaa, 0 5px 0 #acacac, 0 6px 1px rgba(0,0,0,0.1), 0 0 5px rgba(0,0,0,0.1), 0 1px 3px rgba(0,0,0,0.3), 0 3px 5px rgba(0,0,0,0.2), 0 5px 10px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.2), 0 20px 20px rgba(0,0,0,0.15);
+    }
+
+
+.wallpaper{
+    background: url(https://www.pixelstalk.net/wp-content/uploads/2016/04/Stars-wallpaper-HD-desktop.jpg) no-repeat;
+  height: 120rem;
+  padding: 5rem;
+  background-position: center;
+  background-size: cover;
+}
+.countriesGrid{
+    display: grid;
+    grid-template-columns: repeat(3, 270px);
+    gap: 120px;
+    padding: 40px;
+    justify-content: center;
+    
+}
+
+.titleContainer{
+    background-color: #ffffff;
+  
+    opacity: 0.8;
+    height: 70px;
+  
+} */
+
+/* .title{
+    align-items: left;
+    text-align: left;
+   
+    padding-left: 150px;
+    cursor: pointer;
+    display: block;
+    
+}
+
+.title:hover{
+    color: #44ADD0;
+}
+
+.center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative; 
+    top: -50px;
+  
+}
+
+.selectGap{
+    gap: 10px;
+} */
+
+
+/* 
+
+@media (max-width: 560px){
+    .countriesGrid{
+        grid-template-columns: 100%;
+    }
+}
+ */
+
+
+/* CSS */
+/* .button50 {
+  padding: 0.6em 2em;
+  border: none;
+  outline: none;
+  color: rgb(255, 255, 255);
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+ 
+
+}
+
+.button50:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-button50 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+@keyframes glowing-button50 {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.button50:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #222;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+ */

@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .landing{
+    background-image: url("https://www.wallpaperkiss.com/wimg/b/189-1896509_big.jpg ");
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }  
+
+  .btn_landing{
+    border-radius: 5px;
+    color:#07648f;
+    background-color: antiquewhite;
+    width: 8em;
+    padding: 5px;
+    border-color: #07648f;
+    font-family: 'Arvo', serif;
+    font-size: medium;
+    font-weight: bolder;
+    cursor: pointer;
+  }
+
+  .btn_landing:hover{
+    color: antiquewhite;
+    background-color: #07648f;
+    border-color: #07648f;
+    width: 8em;
+    padding: 5px;
+}
+
+.titleLanding {
+    padding-top: 15%;
+    padding-bottom: 15%;
+    font-family: Arial Black; 
+    font-weight: bolder; 
+    font-size: 80px; 
+    color: #fff; 
+    text-shadow: 0 1px 0 #ddd, 0 2px 0 #ccc, 0 3px 0 #bbb, 0 4px 0 #aaa, 0 5px 0 #acacac, 0 6px 1px rgba(0,0,0,0.1), 0 0 5px rgba(0,0,0,0.1), 0 1px 3px rgba(0,0,0,0.3), 0 3px 5px rgba(0,0,0,0.2), 0 5px 10px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.2), 0 20px 20px rgba(0,0,0,0.15);
+    }
+
+center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+
+
+
+/* 
+.landing{
+    background:url(https://www.utm.my/insteg/files/2018/01/4k-space-background.jpg);
+    
+    background-position: center;
+    background-size: cover;
+    height: 48.5rem;
+    padding: 5rem;
+    background-repeat: no-repeat;
+
+
+}
+
+/* .center{
+
+    justify-content: center;
+    align-items: center;
+} */
+
+/* .center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+ */
+ 
+
+/* .title_landing{
+    font-family: 'Liberty';
+        font-weight: 100;
+        font-size: 7rem;
+       
+        flex-flow: row;
+        color: #000000;
+        text-shadow: 0 0 2rem #c020dd;
+        display: inline-block;
+
+}
+
+ */

@@ -1,0 +1,269 @@
+.create{
+
+    background: url(https://www.go-fair.org/wp-content/uploads/2020/09/iStock-878855462_NicoElNino-scaled.jpg) no-repeat;
+    
+    height: 80rem; 
+    padding: 5rem;
+    background-position: center;
+    background-size: cover;
+    
+}
+
+.title{
+    padding: 40px;
+    margin-top: 100px;
+    font-family: Arial Black; 
+    font-weight: bolder; 
+    font-size: 40px; 
+    color: #fff; 
+    text-shadow: 0 1px 0 rgb(168, 139, 139), 0 2px 0 #ccc, 0 3px 0 #bbb, 0 4px 0 #aaa, 0 5px 0 #acacac, 0 6px 1px rgba(0,0,0,0.1), 0 0 5px rgba(0,0,0,0.1), 0 1px 3px rgba(0,0,0,0.3), 0 3px 5px rgba(0,0,0,0.2), 0 5px 10px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.2), 0 20px 20px rgba(0,0,0,0.15);
+    
+  
+}
+
+
+.center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+}
+
+.countryContainer{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+
+.justify{
+    background: rgba(255, 255, 255, 0.5);
+    padding: 5em;
+    
+    border-radius: 20px;
+    border-left: 1px solid white;
+    border-top: 1px solid white;
+    backdrop-filter: blur(10px);
+    box-shadow: 20px 20px 40px -6px rgba(0,0,0,0.2);
+    text-align: center;
+    
+} 
+
+
+
+.back {
+    border-radius: 5px;
+    color:#07648f;
+    background-color: antiquewhite;
+    width: 8em;
+    padding: 5px;
+    border-color: #07648f;
+    font-family: 'Arvo', serif;
+    font-size: medium;
+    font-weight: bolder;
+    cursor: pointer;
+  }
+
+  .back:hover {
+    color: antiquewhite;
+    background-color: #07648f;
+    border-color: #07648f;
+    width: 8em;
+    padding: 5px;
+  }
+  
+
+ .label{
+    font: bolder;
+    color: #07648f;
+}
+
+.labelRadio{
+    color:#07648f;
+    margin-left: 1px;
+}
+
+.label2{
+    color:#07648f;
+    padding-bottom: 1px;
+    
+}
+
+.container{
+    color: #07648f;
+}
+
+
+
+
+.input{
+    height: 20px;
+    border-radius: 20px;
+    padding: 5px 50px 5px 10px;
+    font-size: 0.8rem;
+    border: 1px solid #07648f;
+    background-color: #ffffff;
+}
+
+.inputt{
+    height: 20px;
+    border-radius: 20px;
+    padding: 5px 50px 5px 10px;
+    font-size: 0.8rem;
+    border: 1px solid #07648f;
+    background-color: #ffffff;
+    margin-top: 1px;
+}
+
+
+
+
+.btn_submit{
+    border-radius: 5px;
+    color:#07648f;
+    background-color: antiquewhite;
+    width: 8em;
+    padding: 5px;
+    border-color: #07648f;
+    font-family: 'Arvo', serif;
+    font-size: medium;
+    font-weight: bolder;
+    cursor: pointer;
+    
+}
+
+.btn_submit:hover {
+    color: antiquewhite;
+    background-color: #07648f;
+    border-color: #07648f;
+    width: 8em;
+    padding: 5px;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+/* 
+
+.create{
+
+    background: url(https://www.pixelstalk.net/wp-content/uploads/2016/04/Stars-wallpaper-HD-desktop.jpg) no-repeat;
+    height: 49rem;
+    padding: 5rem;
+    background-position: center;
+    background-size: cover;
+    
+}
+
+.title{
+    padding: 20px;
+    margin-top: 20px;
+  
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+
+.input{
+    height: 20px;
+    border-radius: 20px;
+    padding: 5px 50px 5px 10px;
+    font-size: 0.8rem;
+    border: 1px solid #BCE0ED;
+    background-color: #BCE0ED;
+}
+
+.input:focus{
+    outline: none;
+    border: 1px solid #211C42;
+    box-shadow: 0 0 5px #211C42;
+}
+
+.label{
+    height: 20px;
+    border-radius: 20px;
+    padding: 5px 10px 10px 10px;
+    font-size: 1.2rem;
+}
+
+.center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+}
+
+.countryContainer{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.name{
+    font-weight: 500;
+         padding-left: 5px;
+}
+
+.justify{
+    background: white;
+    padding: 3em;
+    height: 320px;
+    border-radius: 20px;
+    border-left: 1px solid white;
+    border-top: 1px solid white;
+    backdrop-filter: blur(10px);
+    box-shadow: 20px 20px 40px -6px rgba(0,0,0,0.2);
+    text-align: center;
+    position: relative;
+    transition: all 0.2s ease-in-out;
+}
+
+.radio{
+    height: 20px;
+    border-radius: 20px;
+    padding: 5px 10px 10px 10px;
+    font-size: 1.2rem;
+    gap: 5px;
+    cursor: pointer;
+}
+
+
+*/

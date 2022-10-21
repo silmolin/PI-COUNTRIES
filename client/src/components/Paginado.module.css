@@ -1,0 +1,128 @@
+.paginado{
+    display: inline-block;
+    padding: 40px;
+    justify-content: center;
+    text-align: center;
+}
+
+.numbers{
+    text-decoration: none;
+    list-style: none;
+    background-color: #ffffff;
+    border-radius: 50px;
+    justify-content: center;
+    display: inline-block;
+    margin-right: 10px;
+    cursor: pointer;
+    
+}
+
+.number{
+    display: block;
+    width: 35px;
+    height: 35px;
+    align-content: center;
+    text-align: center;
+    justify-content: center;
+    gap:10px;
+    border-radius: 5px;
+    border: transparent;
+    font-weight: bolder;
+    font-family: 'Arvo', serif; 
+    cursor: pointer;
+    border-color: #07648f;
+    color:#07648f;
+    
+}
+
+
+.paginado li button:hover {
+    background-color: #07648f;
+    color: #D6ECF6;
+}
+
+
+
+/* .paginado li {
+    display: inline;
+    perspective: 1000px;
+    
+  }
+ */
+
+ /*  .paginado li button {
+    border-radius: 5px;
+    float: left;
+    padding: 8px 18px;
+    background-color: antiquewhite;
+    color:#07648f;
+    border: transparent;
+    margin: 3px;
+   font-weight: bolder;
+    transition: transform 0.5s ease-in-out;
+    transform-style: preserve-3d;
+    font-family: 'Arvo', serif; 
+    margin-bottom: 5px;
+    border-color: #07648f;
+    justify-content: center;
+  
+  }
+
+  
+
+.paginado li button:hover {
+    background-color: #07648f;
+    color: #D6ECF6;
+}
+
+.pagesNumber{
+    flex: auto;
+} */
+
+
+/* // */
+
+  
+
+/* .paginado{
+    text-decoration: none;
+    display: inline-block;
+    padding: 40px;
+    justify-content: center;
+    text-align: center;
+
+}
+
+.numbers{
+    text-decoration: none;
+    list-style: none;
+    background-color: #D6ECF6;
+    border-radius: 50px;
+    justify-content: center;
+    display: inline-block;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.numbers:hover{
+    border: 1px solid #211C42;
+    box-shadow: 0 0 5px #211C42;
+    text-shadow: 0 0 2px rgb(0, 255, 221);
+}
+
+.number{
+    display: block;
+    width: 30px;
+    height: 30px;
+    align-content: center;
+    text-align: center;
+    justify-content: center;
+    gap:10px;
+}
+
+.pagesNumber{
+    flex: auto;
+} */
+
+
+
