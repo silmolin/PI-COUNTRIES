@@ -7,7 +7,8 @@ module.exports = (sequelize) => {
   sequelize.define('activity', {
       // Sequelize crea el id por defecto 
     name: {
-        type: DataTypes.STRING
+        type: DataTypes.STRING,
+        unique: true,
     },
     difficulty: {
         type: DataTypes.ENUM('1','2','3','4','5')

@@ -37,26 +37,28 @@
 
  .background{
     background: url("https://www.go-fair.org/wp-content/uploads/2020/09/iStock-878855462_NicoElNino-scaled.jpg");
-    padding: 20rem; 
+    padding: 5rem; 
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
     justify-content: center;
-     height: 80rem;
+     height: 50rem;
     /* background: url("https://thefintechtimes.com/wp-content/uploads/2020/03/iStock-1154360052.jpg") no-repeat;
     height: 49rem;
     padding: 5rem; */
-    color:#07648f
+    color:#07648f,
+    
     
 }
 
 .countryImage{
     border-radius: 15px;
     margin-right: 0.5rem;
+    /* width: 800px; */
  }
  
  .backCaja {
-     margin-right: 1rem;
+     margin-right: 3rem;
      
  }
 
@@ -94,9 +96,6 @@
     text-align: justify;
 }
 
-.firstItem{
-    margin-top: 0;
-}
 
 .actContainer{
     display: grid;
@@ -140,4 +139,5 @@
 p {
     font-size: 1.3rem;
     color: #111;
+    color:#07648f
 }

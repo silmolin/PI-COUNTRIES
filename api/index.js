@@ -21,8 +21,9 @@ const server = require('./src/app.js');
 const { conn } = require('./src/db.js');
 
 // Syncing all the models at once.
-conn.sync({ force: false }).then(() => { /// EN FALSE NO SE BORRAN Y EN TRUE SI.
+conn.sync({ force: true }).then(() => { /// EN FALSE NO SE BORRAN Y EN TRUE SI.
   server.listen(3001, () => {
     console.log('%s listening at 3001'); // eslint-disable-line no-console
   });
 });
+// force true fuerza el reinicio

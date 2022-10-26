@@ -1,11 +1,14 @@
 import React from "react";
 import { useEffect, useState} from "react";
 import {useDispatch, useSelector} from 'react-redux'
-import {getCountries, filterByContinent, filterByActivity, getActivities, orderPopulation, orderName}  from '../actions'
 import {Link} from 'react-router-dom'
+
+import { getCountries, filterByContinent, filterByActivity, getActivities, orderPopulation, orderName }  from '../actions'
+
 import CountryCard from './CountryCard'
 import Paginado from "./Paginado"
 import Nav from "./Nav";
+
 import styles from './Home.module.css'
 
 
@@ -17,21 +20,28 @@ function Home(){
 
     const allActivities = useSelector((state) => state.activities)
 
+
+    
+
     // Mientras se cargan los paises
     const[isLoading, setIsLoading] = useState(true);
 
-    // Pagina actual 
-    const [currentPage, setCurrentPage] = useState(1)
-    // Cantidad de paises por pagina
-    const [countriesPage, setCountriesPage] = useState(9)
+    
+    const [currentPage, setCurrentPage] = useState(1) // Pagina actual - empieza en 1
+    const [countriesPage, setCountriesPage] = useState(10) // Cantidad de paises por pagina
+    const LastCountry = currentPage * countriesPage  //Posicion del ultimo pais
+    
+    if (LastCountry===10){
+        var FirstCountry = 1;
+    } else{
+        FirstCountry = LastCountry - countriesPage//Posicion del primer pais
+    }
+    //const FirstCountry = LastCountry - countriesPage//Posicion del primer pais
+    
+    // Se divide el array de acuerdo a la cantidad de paises necesarios (10)
+    const currentCountries = allCountries.slice(FirstCountry-1, LastCountry-1) // guarda los paises q voy a tener en cada pág // el slice agarra el arreglo y toma una porcion de acuerdo a lo que le paso x parametro, en este caso el indice del primer pais y el indice del ultimo pais
 
-    const [order, setOrder] = useState('')
-    //Posicion del ultimo pais
-    const LastCountry = currentPage * countriesPage
-    //Posicion del primer pais
-    const FirstCountry = LastCountry - countriesPage
-    // Se divide el array de acuerdo a la cantidad de paises necesarios (9)
-    const currentCountries = allCountries.slice(FirstCountry, LastCountry)
+    const [order, setOrder] = useState('') // lo uso p el filto de ordenar x AZ y ZA
 
     const paginado = (totalPages)=>{
         setCurrentPage(totalPages);
@@ -71,9 +81,7 @@ function Home(){
         setIsLoading(false)
     }, [dispatch, ]) //Si alguno de estos valores cambia, se vuelve a ejecutar
 
-    // if(isLoading){
-    //     return <div>Cargando...</div>
-    // }
+ 
 
      const handleClick = (event) => {
         event.preventDefault();
@@ -87,7 +95,7 @@ function Home(){
         setOrder(`Ordenado ${e.target.value}`)
        }
 
-    function handleSort(event){
+    function handleSortByName(event){
         event.preventDefault();
         dispatch(orderName(event.target.value));
         setCurrentPage(1);
@@ -102,6 +110,8 @@ function Home(){
     }
 
     function handleFilterActivity(event){
+        event.preventDefault()
+        event.target.value === "none" ? dispatch(getCountries()):
         // Se toma como payload el value de la option que elija el usuario
         dispatch(filterByActivity(event.target.value))
         console.log(event.target.value)
@@ -123,13 +133,7 @@ function Home(){
 
                     <Nav  setCurrentPage ={setCurrentPage}/>
 
-                </div>
-                
-                             
-                      
-        
-         
-        
+                </div>    
         
         <div>
             <div className={styles.boxFiltrosYsearchBar}>
@@ -141,7 +145,7 @@ function Home(){
                 </select>
 
             
-            <select onChange={event => handleSort(event)} className={styles.filtro}>
+            <select onChange={event => handleSortByName(event)} className={styles.filtro}>
                 {/** Deben ser filtrados ascendente y descendente por orden alfabetico y por cantidad de poblacion
                  */}
                 <option hidden value="all">Ordenar por nombre</option> 
@@ -162,7 +166,7 @@ function Home(){
 
             <select onChange={event => handleFilterActivity(event)} className={styles.filtro}>
                 <option value="All">Todas las actividades </option>
-                { allActivities && allActivities.map(activity => (
+                { allActivities.map(activity => (
                     <option value={activity.name} key={activity.id}>{activity.name}</option>
                 ))} 
             </select>
@@ -176,7 +180,7 @@ function Home(){
 
             {/* Se hace el map sobre el nuevo array de countries, para renderizar solo los 
             necesarios por pagina */}
-            { isLoading ? <img src='../images/loading.gif' alt='Cargando...'/> :
+            { isLoading ? <h1>Cargando...</h1> :
             
             <div className={styles.cajaPaises}>
 
@@ -188,7 +192,8 @@ function Home(){
                     continent={country.continent}
                     id={country.id}
                     population={country.population}
-                    key={country.id}/>
+                    key={country.id}
+                    />
                 </Link>
             ))}
             </div>

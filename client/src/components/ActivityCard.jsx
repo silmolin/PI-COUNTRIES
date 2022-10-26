@@ -5,9 +5,10 @@ const ActivityCard = (activity) => {
 
     return (
         <div className={styles.card}>
-            {activity && (
+            {
+            activity && (
              
-                <p key={activity.id}>
+            <p key={activity.id}>
             <p><strong>Actividad: </strong>{activity.name}</p>
             <p><strong>Dificultad: </strong>{activity.difficulty}</p>
             <p><strong>Duracion: </strong>{activity.duration}</p>

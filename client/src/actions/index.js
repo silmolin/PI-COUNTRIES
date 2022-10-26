@@ -7,18 +7,18 @@ export const GET_ACTIVITY = 'GET_ACTIVITY';
 export const ORDER_BY_NAME = 'ORDER_BY_NAME';
 export const FILTER_CONTINENT = 'FILTER_CONTINENT';
 export const FILTER_ACTIVITY = 'FILTER_ACTIVITY'
+export const POST_ACTIVITY = 'POST_ACTIVITY'
 
+
+// cuando yo vaya a byscar los datos a mi backend, los traigo a redux, los almaceno y luego los muestro a traves de los componentes
 
 // Conexion con el backend
 export function getCountries(){ //rariii
-    return async function(dispatch){
-        let json = await axios.get('http://localhost:3001/api/countries');
-       const data = json.data
-        //const {currentCountries, totalPages} = paginado(data)
+    return async function(dispatch) { // esta fn recibe un dispatch y despacha uuna accion
+        let json = await axios.get('http://localhost:3001/countries');
         return dispatch({
             type: 'GET_COUNTRIES',
-            payload: data
-            //payload: {data, currentCountries, totalPages, actualPage : 1}   
+            payload: json.data  // lo q devuelve el backEnd
         })
     }
 }
@@ -41,7 +41,7 @@ export function getCountries(){ //rariii
 
 
 export const getCountry = (id) => dispatch => {
-    return fetch ("http://localhost:3001/api/countries/" + id)
+    return fetch ("http://localhost:3001/countries/" + id)
     .then(response => response.json())
     .then(data => {
         dispatch({
@@ -50,19 +50,21 @@ export const getCountry = (id) => dispatch => {
     });
 };
 
-export function getActivities(){
+export function getActivities(){  
     return async function(dispatch){
-        let json = await axios.get('http://localhost:3001/api/activity');
+        let json = await axios.get('http://localhost:3001/activity');
         return dispatch({
             type: 'GET_ACTIVITY',
             payload: json.data   
         })
     }
-}
+} 
+
+
 
 export function postActivity(payload){
     return async function(dispatch){
-        let json = await axios.post('http://localhost:3001/api/activity', payload);
+        let json = await axios.post('http://localhost:3001/activity', payload); // dir + obj x body
         return json;
     }
 }
@@ -70,7 +72,7 @@ export function postActivity(payload){
 export function getByName(name){
     return async function(dispatch){
         try {
-            let json = await axios.get('http://localhost:3001/api/countries?name=' + name);
+            let json = await axios.get('http://localhost:3001/countries?name=' + name);
             return dispatch({
                 type: 'GET_BY_NAME',
                 payload: json.data
@@ -132,9 +134,10 @@ export function orderPopulation(payload){
 
 
 // FILTRO P/ PAISES CON MENOS DE 30 MILLONES DE PERSONAS // CON MENOS DE CIERTOS HABITANTES
+
 // EN LAS ACTIONS DE ASYNC AWAIT A PROMESAS
 
-// COMO BORRAR LA ACTIVIDAD CREADA PR NOSOTRAS  ????
+// COMO BORRAR LA ACTIVIDAD CREADA PR NOSOTRAS  ????  OK
 
 // AGREGAR NUEVO INPUT EN FORM
 
@@ -146,7 +149,7 @@ export function orderPopulation(payload){
 
 // COMPONENTE DE CLASE A FUNCIONAL 
 
-// RUTA PUT Y DELETE   --> INVESTIGAR
+// RUTA PUT Y DELETE   --> OK
 
 
 // HACERR UN BOTON Y PAGIINADO CON NEXT Y PREV
@@ -162,3 +165,5 @@ export function orderPopulation(payload){
 // BOTON ON CLICK Y AL FILTRO ON CHANGE - UN BOTON Q TRAIGA LOS VIDEOS JUEGOS DEL 2016 EN ADELANTE
 
 // PREG QUE ES REDUX
+
+// metodo set,q lo uso..

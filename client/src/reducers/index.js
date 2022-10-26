@@ -1,4 +1,4 @@
-import {GET_COUNTRIES, GET_COUNTRY, GET_BY_NAME, FILTER_CONTINENT, FILTER_ACTIVITY, GET_ACTIVITY, ORDER_BY_NAME} from '../actions'
+import {GET_COUNTRIES, GET_COUNTRY, GET_BY_NAME, FILTER_CONTINENT, FILTER_ACTIVITY, GET_ACTIVITY, ORDER_BY_NAME, POST_ACTIVITY} from '../actions'
 
 const initialState = {
     // Estado para renderizar, se usa para hacer el filtrado
@@ -15,7 +15,7 @@ function rootReducer(state = initialState, action){
             return {
                 ...state,
                 countries: action.payload,
-                allCountries: action.payload
+                allCountries: action.payload // xq van los 2 estados? seguro x el btn de refresh
             } 
         case GET_BY_NAME:
             return {
@@ -31,7 +31,7 @@ function rootReducer(state = initialState, action){
                 ...state,
                 activities: action.payload
             }    
-        case 'POST_ACTIVITY':
+        case POST_ACTIVITY:
             return{
                 ...state
             }
@@ -45,8 +45,8 @@ function rootReducer(state = initialState, action){
             }    
         case FILTER_CONTINENT:
             const allCountries = state.allCountries
-            const continentFilter = action.payload === 'All' ?
-            allCountries : allCountries.filter(country => 
+            const continentFilter = action.payload === 'All' ? 
+                allCountries : allCountries.filter(country => 
                 country.continent === action.payload)    
 
             return{

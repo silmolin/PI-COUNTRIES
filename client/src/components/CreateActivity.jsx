@@ -11,33 +11,37 @@ function validate(input) {
 
     if(!input.name){
         errors.name = ("Se requiere un nombre") }
-       else if(input.name.length > 40){
-        errors.name = ("El nombre es muy largo")        
-     } else if(!input.difficulty){
+       else if(input.name.length > 30){
+        errors.name = ("El nombre es muy largo")     }   
+    
+    if(!input.difficulty){
         errors.difficulty = ("Se requiere poner una dificultad")
-    }else if(!input.duration){
-        errors.duration =("Se requiere duracion") 
-     }else if(input.duration  > 24 || input.duration < 1)
-     errors.duration = ("La duracion debe ser entre 1hs y 24hs")
+    }
+    
+    if(!input.duration){
+        errors.duration =("Se requiere duracion") }
+        else if(input.duration  > 24 || input.duration < 1){
+     errors.duration = ("La duracion debe ser entre 1hs y 24hs")}
      
-     else if(!input.season){
+    if(!input.season){
         errors.season = ("Se requiere una temporada")
-    }else if(input.countries.length === 0){
+    }
+
+   if(input.countries.length === 0){
         errors.countries = ("Se requiere al menos un país")
     }
+
     return errors
 }
-
+       
 
 export default function CreateActivity() {
     const dispatch = useDispatch()
-
     const history = useHistory() //o navigate
-
     const countries = useSelector((state) => state.countries)
+    const [errors, setErrors] = useState({})  // mii estado local p errores
 
-    const [errors, setErrors] = useState({})
-
+    // Inputs 
     const [input, setInput] = useState({
         name: '',
         difficulty: '',
@@ -66,15 +70,19 @@ export default function CreateActivity() {
 
     function handleChange(e){
         // Le agregamos el e.target.value (lo que vamos modificando) al input actual 
-
         e.preventDefault();
-        setInput((prev) => ({ ...prev, [e.target.name]: e.target.value }));
-        setErrors(validate({
-          ...input,
-          [e.target.name]: [e.target.value]
+        /* setInput((prev) => ({ ...prev, [e.target.name]: e.target.value })); */
+        setInput({
+            ...input,
+            [e.target.name] : e.target.value // a medida q voy escribiendo mi estado input va recibiendo y va guardando eso que escribo
         })
-        )
-    
+        console.log(input)
+        
+        setErrors(validate({ // seteo el estado local errors pasandole la fn VALIDATE
+          ...input, // con el estado input y el e.target.name y e.target.value
+          [e.target.name]: [e.target.value]
+        }))
+        console.log(input)
 
     }
 
@@ -87,24 +95,27 @@ export default function CreateActivity() {
         }
          setErrors(validate({
              ...input, 
-             [e.target.name] : e.target.value
+             /* [e.target.name] */ status: e.target.value  // aca modifique!!!!!!!!!!!!!
          }))
     }
 
-    function handleSelect(e){
+    function handleSelect(e){   /// filtro paises
+        e.preventDefault()
         setInput({
             ...input,
             // Concateno lo que ya habia en el array, con el nuevo value
-            countries: [...input.countries, e.target.value]
+            countries: [...new Set([...input.countries, e.target.value])]
         })
          setErrors(validate({
             ...input, 
-            [e.target.name] : e.target.value
+            countries: [...input.countries, e.target.value]
          }))
     }
 
+
+
     function handleSubmit(e){
-        if(!input.name || !input.difficulty || !input.duration || !input.season || !input.countries){
+        if(!input.name || !input.difficulty || !input.duration || !input.season || input.countries < 1){
             e.preventDefault();
             alert('Complete todos los campos para poder continuar')
         } else {
@@ -138,10 +149,10 @@ export default function CreateActivity() {
 
    
 
-    // if(input.name && input.difficulty && input.duration && input.season && input.countries){
-    //     setButtonActivated(true)
-    // }
-
+  /*    if(input.name && input.difficulty && input.duration && input.season && input.countries){
+         setButtonActivated(true)
+     }
+ */
     return (
         <div  className={styles.create}>
             <div>
@@ -217,7 +228,7 @@ export default function CreateActivity() {
                 {input.countries.map((e) =>
                 <div className={styles.countryContainer}>
                     <p className={styles.name}>{e}</p>
-                    <button type='button' onClick={() => handleDelete(e)} className={styles1.back_delete}>X</button>
+                    <button type='button' onClick={() => handleDelete(e)} className={styles1.back_delete}> X </button>
                 </div>
                 
                 )}

@@ -11,9 +11,6 @@ function App() {
   return (
     <BrowserRouter>
     <div className="App">
-      {/* <header>
-        <Link to='/home'><h1>Henry Countries</h1></Link>
-      </header> */}
       <Route exact path='/' component={LandingPage}/>
       <Route exact path='/home' component={Home}/>
       <Route path='/activity' component={CreateActivity}/>
